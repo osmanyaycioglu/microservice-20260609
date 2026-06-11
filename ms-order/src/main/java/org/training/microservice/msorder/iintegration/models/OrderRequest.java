@@ -1,4 +1,4 @@
-package org.training.microservice.msrestaurant;
+package org.training.microservice.msorder.iintegration.models;
 
 import lombok.Data;
 

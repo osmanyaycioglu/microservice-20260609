@@ -1,6 +1,8 @@
 package org.training.microservice.msrestaurant;
 
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -11,7 +13,8 @@ public class RestaurantOrderRestController {
     @Value("${server.port}")
     private int port;
 
-    public String reserve(OrderRequest orderRequestParam){
+    @PostMapping("/reserve")
+    public String reserve(@RequestBody OrderRequest orderRequestParam){
         return "1 saat - " + port;
     }
 }
